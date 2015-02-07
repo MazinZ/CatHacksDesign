@@ -1,0 +1,486 @@
+/* 
+Cat Hacks website
+Original Parallax concept adapted from Jonathan Nicol
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 10px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html { 
+	overflow-y: scroll;
+	}
+	
+@font-face {
+	font-family:DCB;
+	src: url('../fonts/DCB.ttf');
+}
+body {
+	background:#165878;
+	overflow-x: hidden;
+	/*height: 4550px;*/
+	height: 3205px;
+	color: #000;
+	font-size: 14px;
+	font-family: DCB,sans-serif;
+}
+h1 {
+	color: #29799e;
+}
+
+h3 {
+	color:#29799e;
+	font-size:24px;	
+}
+
+#smallerTextbox h2 {
+	color:#d9d9d9;
+	margin: 0 0 25px 0;
+	font-size: 60px;
+	font-family: DCB, sans-serif;
+	font-weight: normal;
+	line-height: 10px;
+	display:inline;
+}
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color:#21a97e;
+	outline: none;
+	text-decoration:none;
+	}
+	a:hover { 
+		color:#000;
+		}
+img { 
+	display:block;
+	}
+p {
+	font-size:25px;
+	margin:1em 0;
+	line-height:30px;
+	}
+
+
+
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #3b3b3b;
+	border-bottom: 1px solid #3b3b3b;
+	height: 3px;
+}
+
+
+
+#wrapper {
+	position: relative;
+}
+#branding {
+	width: 100%;
+	background: #fff;
+	}
+	#branding h1 {
+		width: 940px;
+		padding: 10px 15px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		}
+nav#primary {
+	z-index: 5;
+	position: fixed;
+	top: 50%;
+	right: 16px;
+	margin-top: -40px;
+}
+nav#primary li {
+	position: relative;
+	height: 20px;
+}
+nav#primary a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: transparent url('../img/nav-dot.png') 4px 4px no-repeat;
+}
+nav#primary a:hover, nav#primary a.active {
+	background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;
+}
+nav#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	font-family:arial,sans-serif;
+	font-style:italic;
+	font-weight:bold;
+	white-space: nowrap;
+	background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;
+	}
+
+/* Parallax
+*****************************************************************/
+
+#content {
+	z-index: 4;
+	position: relative;
+
+	margin: 0 auto;
+	}
+	#content article {
+		}
+		#main,
+		#signup,
+		#faq,
+		#sponsorpage {
+			}
+		#main {
+			position: absolute;
+			top: 0px;
+			}
+		#signup {
+			position: absolute;
+			top: 700px;
+			width:100%;
+			height:400px;
+			background-color:#134e6a;
+			color:#d9d9d9;
+			font-size:81px;
+			}
+		#faq {
+			position: absolute;
+			top:1700px;
+			margin-left:auto;
+			margin-right:auto;
+			left:0;
+			right:0;
+	
+			}
+			#content h1 {
+				margin: 0 0 25px 0;
+				font-size: 60px;
+				font-family: DCB, sans-serif;
+				font-weight: normal;
+				line-height: 10px;
+					display:inline;
+
+				}
+		#sponsorpage {
+			position: absolute;
+			top: 2445px;
+			width:100%;
+			
+			}
+			
+#sponsors {
+	margin:0;
+	width:100%;
+	background-color:#d9d9d9;
+	background-image:url("../img/sponsorbg.png");
+	background-repeat:no-repeat;
+	background-position:right top; 
+	height:700px;
+		
+	
+}
+
+#sponsorTextbox {
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;	
+	height:30px;
+	width:335px;
+	
+	
+}
+.gs-resize-handle-both{
+   display:none;
+}
+
+.gridster li {
+    background: #FFF;
+    cursor: pointer;
+ 	position:fixed;
+}
+.gridster ready{
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;	
+	
+	
+}
+
+/* ******************* */
+#logoBackground{
+
+	line-height: 1.5;
+
+		z-index:1000;
+		left: 355px;
+		width:662px;
+	height:554px;
+ 	margin: auto; 
+  	position: absolute;
+  	top: 700px; left: 0; bottom: 0; right: 0; 
+	background-color:#29799e;
+	background-image:url("../logo.png");
+	background-repeat:no-repeat;
+	background-position:center center;
+	
+}
+#textbox{
+	width:265px;
+	margin-top:370px;
+	margin-left:195px;
+	height:85px;
+	color:#fff;
+	font-size:73px;	
+}
+
+#textbox h2{
+	margin-left:10px;
+	margin-top:-35px;
+	color:#fff;
+	font-size:23px;
+}
+#smallerTextbox {
+	width:700px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;	
+	line-height: .7;
+
+}
+
+#faqBox{
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;
+	width:750px;
+	height:550px;
+	background-color:#10435A;
+	color:#d9d9d9;
+	font-family:arial,sans-serif;
+	font-size:15px;
+	line-height:20px;
+	padding:30px;
+}
+
+
+td span 
+{
+    display: block;
+	margin-top:10px;
+	margin-left:5px;
+}
+
+
+th, td {
+  	width:50%;
+  	min-width: 300px;
+  	text-align: left; 
+  	vertical-align: top;
+}
+
+.faqQuestion {
+		font-weight: bold;
+			margin-top:10px;
+	margin-left:5px;
+	}
+
+
+
+#parallax-bg3 {
+	z-index: 3;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 940px;
+	margin-left: -470px; /* move left by half element's width */
+	}
+	#bg3-1 {
+		
+	z-index: 3;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 940px;
+	margin-left: -470px;
+	
+		}
+	#bg3-2 {
+		position: absolute;
+		top: 812px;
+		left: 321px;
+		}
+	#bg3-3 {
+		position: absolute;
+		top: 1628px;
+		left: 403px;
+		}
+	#bg3-4 {
+		position: absolute;
+		top: 2700px;
+		left: -85px;
+		}
+/* midground  */
+#parallax-bg2 {
+	z-index: 2;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 1200px;
+	margin-left: -600px; /* move left by half element's width */
+	}
+	#bg2-1 {
+		position: absolute;
+		top: -30px;
+		left: px;
+		}
+	#bg2-2 {
+		position: absolute;
+		top: 300px;
+		left: 1150px;
+		}
+	#bg2-3 {
+		position: absolute;
+		top: 543px;
+		left: -35px;
+		}
+	#bg2-4 {
+		position: absolute;
+		top: 1180px;
+		left: 250px;
+		}
+	#bg2-5 {
+		position: absolute;
+		top: 900px;
+		left: 890px;
+		}
+/* background */
+#parallax-bg1 {
+	z-index: 1;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 1200px;
+	margin-left: -600px; /* move left by half element's width */
+	}
+	#bg1-1 {
+		position: absolute;
+		/*top: -80px;
+		left: 10px;*/
+		
+		top: 85px;
+		left: -270px;
+		}
+	#bg1-2 {
+		position: absolute;
+		top: 440px;
+		left: 795px;
+		}
+	#bg1-3 {
+		position: absolute;
+		top: 900px;
+		left: -220px;
+		}
+	#bg1-4 {
+		position: absolute;
+		top: 1020px;
+		left: 450px;
+		}
+
+
+ [data-col="7"] { left:970px; }
+ [data-col="6"] { left:810px; }
+ [data-col="5"] { left:650px; }
+ [data-col="4"] { left:490px; }
+ [data-col="3"] { left:330px; }
+ [data-col="2"] { left:170px; }
+ [data-col="1"] { left:10px; }
+ [data-row="16"] { top:2410px; }
+ [data-row="15"] { top:2250px; }
+ [data-row="14"] { top:2090px; }
+ [data-row="13"] { top:1930px; }
+ [data-row="12"] { top:1770px; }
+ [data-row="11"] { top:1610px; }
+ [data-row="10"] { top:1450px; }
+ [data-row="9"] { top:1290px; }
+ [data-row="8"] { top:1130px; }
+ [data-row="7"] { top:970px; }
+ [data-row="6"] { top:810px; }
+ [data-row="5"] { top:650px; }
+ [data-row="4"] { top:490px; }
+ [data-row="3"] { top:330px; }
+ [data-row="2"] { top:170px; }
+ [data-row="1"] { top:10px; }
+ [data-sizey="1"] { height:140px; }
+ [data-sizey="2"] { height:300px; }
+ [data-sizey="3"] { height:460px; }
+ [data-sizey="4"] { height:620px; }
+ [data-sizey="5"] { height:780px; }
+ [data-sizey="6"] { height:940px; }
+ [data-sizey="7"] { height:1100px; }
+ [data-sizey="8"] { height:1260px; }
+ [data-sizey="9"] { height:1420px; }
+ [data-sizey="10"] { height:1580px; }
+ [data-sizey="11"] { height:1740px; }
+ [data-sizey="12"] { height:1900px; }
+ [data-sizey="13"] { height:2060px; }
+ [data-sizey="14"] { height:2220px; }
+ [data-sizey="15"] { height:2380px; }
+ [data-sizex="1"] { width:140px; }
+ [data-sizex="2"] { width:300px; }
+ [data-sizex="3"] { width:460px; }
+ [data-sizex="4"] { width:620px; }
+ [data-sizex="5"] { width:780px; }
+ [data-sizex="6"] { width:940px; }
