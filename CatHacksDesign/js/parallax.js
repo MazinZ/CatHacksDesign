@@ -71,9 +71,9 @@ function redrawDotNav(){
 	var section4Top =  $('#sponsorpage').offset().top - (($(document).height() - $('#sponsorpage').offset().top) / 2);;
 	$('nav#primary a').removeClass('active');
 	if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
-		$('nav#primary a.manned-flight').addClass('active');
+		$('nav#primary a.main').addClass('active');
 	} else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-		$('nav#primary a.frameless-parachute').addClass('active');
+		$('nav#primary a.signup').addClass('active');
 	} else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
 		$('nav#primary a.faq').addClass('active');
 	} else if ($(document).scrollTop() >= section4Top){

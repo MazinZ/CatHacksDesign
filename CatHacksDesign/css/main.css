@@ -51,7 +51,7 @@ html {
 	overflow-y: scroll;
 	}
 	
-@font-face {
+/*@font-face {
 	font-family:DCB;
 	src: url('../fonts/DCB.ttf');
 }
