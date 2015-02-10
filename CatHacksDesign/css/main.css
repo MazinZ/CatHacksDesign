@@ -54,7 +54,14 @@ html {
 /*@font-face {
 	font-family:DCB;
 	src: url('../fonts/DCB.ttf');
+}*/
+@font-face {
+font-family: 'DCB';
+src: 
+url('../fonts/DCB.ttf') format('truetype'),
+url('../fonts/DCB.eot?#iefix') format('embedded-opentype');
 }
+
 body {
 	background:#165878;
 	overflow-x: hidden;
